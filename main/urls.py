@@ -18,5 +18,5 @@ from django.urls import path
 from enricbd import views
 
 urlpatterns = [
-        path('enric',views.TodoApi.as_view() ),
+        path('enric',views.EnricApi.as_view() ),
 ]
