@@ -23,7 +23,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ["https://*.up.railway.app", ]
 CORS_ALLOWED_ORIGINS = [
-   "*"
+  "https://*.up.railway.app",
 ]
 
 # Edit the following line and place your railway URL, and your custom URL in the array.
