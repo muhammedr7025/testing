@@ -17,4 +17,11 @@ class EnricApi(APIView):
         data=Enric.objects.all()
         data=EnricSerializer(data,many=True).data
         return Response(data=data,status=status.HTTP_200_OK)
-        
+    
+    def delete(self,request):
+        id=request.data.get('id')
+        data=Enric.objects.get(id=id)
+        if data is None:
+            return Response(data="no data",status=status.HTTP_404_NOT_FOUND)
+        data.delete()
+        return Response(data="review deleted",status=status.HTTP_200_OK)
